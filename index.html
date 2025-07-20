@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .mu-about-area {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .mu-about-header h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .mu-about-header p {
+      text-align: center;
+      color: #555;
+    }
+
+    .mu-about-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .mu-about-content-left, .mu-about-content-right {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .mu-profile-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .mu-skill-progress-bar h3 {
+      margin-bottom: 10px;
+    }
+
+    .mu-skill-progress-bar span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .mu-pro-bar {
+      background: #ddd;
+      height: 18px; /* AQUI LE AUMENTÉ EL ALTO */
+      border-radius: 9px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Todas las barras celestes */
+    .mu-pro-bar::after {
+      content: '';
+      display: block;
+      height: 100%;
+      background: #00bfff; /* CELESTE */
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 9px;
+    }
+
+    /* % de cada barra */
+    .mu-html5-bar::after { width: 85%; }
+    .mu-css-bar::after { width: 80%; }
+    .mu-photoshop-bar::after { width: 80%; }
+    .mu-wordpress-bar::after { width: 70%; }
+    .mu-jquery-bar::after { width: 95%; }
+
+    .mu-social-media h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .mu-social-media a {
+      margin-right: 10px;
+      font-size: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .mu-resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+
+
+
+
+
+ .kp-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .kp-testimonial-header h2 {
+      margin-bottom: 10px;
+    }
+
+    .kp-header-dot {
+      width: 50px;
+      height: 4px;
+      background-color: #00bfff;
+      margin: 0 auto 20px auto;
+      border-radius: 2px;
+    }
+
+    .kp-testimonials-wrapper {
+      position: relative;
+      height: 230px; /* Ajusta según el contenido */
+    }
+
+    .kp-testimonial {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .kp-testimonial.active {
+      opacity: 1;
+      position: absolute;
+    }
+
+    .kp-quote-icon {
+      font-size: 30px;
+      color: #00bfff;
+    }
+
+    .kp-testimonial p {
+      font-size: 18px;
+      color: #555;
+      margin: 15px 0;
+    }
+
+    .kp-ct-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .kp-ct-title {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .kp-slider-buttons {
+      margin-top: 30px;
+    }
+
+    .kp-slider-buttons button {
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+
+
+
+
+
+
+
+* {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .team-container {
+      max-width: 1200px;
+      min-height: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .team-center h2 {
+      margin-bottom: 10px;
+    }
+    .team-center .team-lead {
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+    .team-carousel {
+      position: relative;
+      overflow: hidden;
+      height: px;
+    }
+    .team-carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 200%;
+    }
+    .team-item {
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .team-member {
+      width: 28%;
+      height: 100%;
+      background: #eaeaea;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: none;
+    }
+    .team-member h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .team-member .team-designation {
+      display: block;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4px;
+    }
+    .team-member.expanded {
+      width: 45%;
+      background: #d0f0ff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .team-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #00bfff;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s;
+      z-index: 10;
+    }
+    .team-arrow:hover {
+      background: #00bfff;
+      color: white;
+    }
+    .team-left-arrow {
+      left: 10px;
+    }
+    .team-right-arrow {
+      right: 10px;
+    }
+
+
+
+
+
+
+
+.service-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.service-header p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.service-header .service-dot {
+  width: 60px;
+  height: 4px;
+  background-color: #00bfff;
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-box {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 8px;
+  width: 300px;
+  transition: all 0.3s;
+}
+
+.service-box:hover {
+  background: #e0f7ff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon img {
+  width: 190px;
+  height: 190px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.service-box h4 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.service-box p {
+  color: #666;
+  font-size: 0.95rem;
+}
+ .proyecto {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      width: 300px;
+      text-decoration: none;
+      color: black;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .proyecto:hover {
+      transform: scale(1.03);
+    }
+    .proyecto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .proyecto h3, .proyecto p {
+      padding: 0.5rem 1rem;
+    }
+ footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+
+
+header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .contenedor {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+  .proyecto img {
+    width: 100px;
+    height: 100px; /* <-- antes era 200px */
+    object-fit: cover;
+  }
+
+
+.contenedor {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.contenedor h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.proyecto {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-decoration: none;
+  color: #333;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.proyecto h3 {
+  font-size: 20px;
+  margin: 15px 15px 5px;
+  color: #222;
+}
+
+.proyecto p {
+  font-size: 14px;
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+
+
+
+
+  </style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Kevin Morales</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dgd2991om/image/upload/v1753043332/WhatsApp_Image_2025-07-20_at_2.28.09_PM_mbva5n.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+    <header id="header" role="banner">
+        <div class="container">
+            <div id="navbar" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a > <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751685352/Black_White_Elegant_Minimalist_Initial_Name_S_K_Monogram_Logo-removebg-preview_ns0zeh_c_crop_w_400_h_270_hzhvju.png" width="90"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
+                        <li><a href="#services">Acerca de mi</a></li>
+                        <li><a href="#portfolio">Formación Académica</a></li>
+                        <li><a href="#pricing">Otros estudios</a></li>
+                        <li><a href="#about-us">Voluntariados</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!--/#header-->
+
+    <section id="main-slider" class="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-content">
+                        <h1>Kevin Osmel Morales Castro</h1>
+                        <p class="lead">Nunca dejes que tus miedos sean más grandes que tus sueños.</p>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item">
+                <div class="container">
+                    <div class="carousel-content">
+                        <h1>Kevin Osmel Morales Castro</h1>
+                        <p class="lead">Cada día es una nueva oportunidad para ser mejor.</p>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.carousel-inner-->
+        <a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
+        <a class="next" href="#main-slider" data-slide="next"><i class="icon-angle-right"></i></a>
+    </section><!--/#main-slider-->
+
+    <section id="services">
+        <div class="container">
+    <div class="mu-about-area">
+
+      <div class="mu-about-header">
+        <h2 class="mu-heading-title">Acerca de mi</h2>
+        <p>Mi nombre es Kevin y soy un joven estudiante del Complejo Educativo Ofelia Herrera y del programa ¡Supérate! Grupo. Nací en San Miguel, El Salvador. Me considero una persona con sólidos valores como la solidaridad, el respeto, la resiliencia y la responsabilidad, los cuales guían mi vida diaria. Tengo habilidades en el manejo de programas de <strong>Office 365</strong> y siempre me esfuerzo por dar lo mejor de mí en cada tarea. Soy alguien que no se rinde ante las dificultades y que mantiene una actitud positiva frente a los retos.
+
+Me apasiona ayudar a los demás y siempre estoy dispuesto a brindar mi apoyo en todo lo que esté a mi alcance.
+</p>
+      </div>
+
+      <div class="mu-about-content">
+        <div class="mu-about-content-left">
+          <img class="mu-profile-img" src="https://res.cloudinary.com/dgd2991om/image/upload/v1752978579/WhatsApp_Image_2025-07-19_at_8.11.33_PM_oq3qkp.jpg" alt="Profile Image">
+        </div>
+        <div class="mu-about-content-right">
+
+          <div class="mu-skill-progress-bar">
+            <h3>Skills</h3>
+            <span>Html5</span>
+            <div class="mu-pro-bar mu-html5-bar"></div>
+
+            <span>CSS</span>
+            <div class="mu-pro-bar mu-css-bar"></div>
+
+            <span>Excel</span>
+            <div class="mu-pro-bar mu-photoshop-bar"></div>
+
+            <span>JS</span>
+            <div class="mu-pro-bar mu-wordpress-bar"></div>
+
+            <span>Word</span>
+            <div class="mu-pro-bar mu-jquery-bar"></div>
+          </div>
+
+          
+
+        
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+    </section><!--/#services-->
+
+    <section id="portfolio">
+        <div class="kp-container">
+  <div class="kp-testimonial-header">
+    <h2>Formación Académica</h2>
+    <div class="kp-header-dot"></div>
+  </div>
+
+  <div class="kp-testimonials-wrapper">
+    <div class="kp-testimonial active">
+      <i class="fa fa-quote-right kp-quote-icon"></i>
+
+      <h5 style="font-size: 20px;" class="kp-ct-name">Centro Escolar Jesus Escobar De Cardenas</h5>
+      <p>San Miguel, El Salvador</p>
+      <p>2012 – 2023</p>
+      <p></p>
+      <p>Realicé mis estudios académicos desde kínder hasta noveno grado</p>
+      
+    </div>
+
+    <div class="kp-testimonial">
+      <i class="fa fa-quote-right kp-quote-icon"></i>
+      <h5 style="font-size: 20px;" class="kp-ct-name">Complejo Educativo Ofelia Herrera</h5>
+      <p>San Miguel, El Salvador</p>
+      <p>2024 – 2025</p>
+      <p></p>
+      <p>Realicé mis estudios de bachillerato en el Complejo Educativo Ofelia Herrera, </p>
+    </div>
+
+    <div class="kp-testimonial">
+      <i class="fa fa-quote-right kp-quote-icon"></i>
+     <h5 style="font-size: 20px;" class="kp-ct-name">¡Supérate! GrupoQ</h5>
+      <p>San Miguel, El Salvador</p>
+      <p>2023 – 2025</p>
+      <p></p>
+      <p>ealicé mis estudios de bachillerato en el Complejo Educativo Ofelia Herrera, donde fortalecí mis conocimientos y valores para mi desarrollo personal y académico.</p>
+    </div>
+  </div>
+
+  <div class="kp-slider-buttons">
+    <button onclick="kpPrevSlide()">⬅</button>
+    <button onclick="kpNextSlide()">➡</button>
+  </div>
+</div>
+    </section><!--/#portfolio-->
+
+
+
+<section id="pricing">
+  <div class="team-container">
+    <div class="team-center">
+      <h2>Otros estudios</h2>
+      <p class="team-lead">
+        conocimientos adicionales que complementan mi formación y amplían mis habilidades
+      </p>
+    </div>
+
+    <div class="team-carousel" id="team-carousel">
+      <div class="team-carousel-inner" id="carousel-inner">
+
+        <!-- Grupo 1 -->
+        <div class="team-item">
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751746888/WhatsApp_Image_2025-07-05_at_2.20.17_PM_rvfuoc.jpg" alt="GeoEspaciales" />
+            <h3 style="font-size: 20px">
+              Miembro de GeoEspaciales
+              <small style="font-size: 15px" class="team-designation">
+                Fui seleccionado para participar en el programa Jóvenes GeoEspaciales.
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751753498/WhatsApp_Image_2025-07-05_at_4.10.13_PM_w5gzad.jpg" alt="Certificado Excel" />
+            <h3 style="font-size: 20px">
+              Certificación de Microsoft Excel
+              <small style="font-size: 15px" class="team-designation">
+                Validado por Certiport, demostrando habilidades profesionales.
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751753485/WhatsApp_Image_2025-07-05_at_4.10.13_PM_1_kjvmfj.jpg" alt="Certificado JS" />
+            <h3 style="font-size: 20px">
+              Certificación de JavaScript
+              <small style="font-size: 15px" class="team-designation">
+                Validado por Certiport, con enfoque práctico y profesional.
+              </small>
+            </h3>
+          </div>
+        </div>
+
+        <!-- Grupo 2 -->
+        <div class="team-item">
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751753275/WhatsApp_Image_2024-07-09_at_10.59.41_PM_bu2oun.jpg" alt="Certificado JS 2" />
+            <h3 style="font-size: 20px">
+              Certificación de JavaScript
+              <small style="font-size: 15px" class="team-designation">
+                Por haber completado satisfactoriamente el curso de JavaScript.
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751753164/CSS_qrcsbg.jpg" alt="Certificado CSS" />
+            <h3 style="font-size: 20px">
+              Certificación de CSS
+              <small style="font-size: 15px" class="team-designation">
+                Por haber completado satisfactoriamente el curso de CSS.
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751753238/HTML_doikp5.jpg" alt="Certificado HTML" />
+            <h3 style="font-size: 20px">
+              Certificación de HTML
+              <small style="font-size: 15px" class="team-designation">
+                Por haber completado satisfactoriamente el curso de HTML.
+              </small>
+            </h3>
+          </div>
+        </div>
+
+        <!-- Grupo 3 (NUEVOS) -->
+        <div class="team-item">
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751752154/Certificado_numero_1_od33dx.png" alt="Certificado Python" />
+            <h3 style="font-size: 20px">
+              Certificación de Introduccion 
+              <small style="font-size: 15px" class="team-designation">
+                Diploma obtenido por completar el curso de Programación para Principiantes
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752967447/1752967375006-8170857d-f0d6-4006-864e-ddf96be60eb7_1_mpjzag.jpg" alt="Certificado SQL" />
+            <h3 style="font-size: 20px">
+              Power BI
+              <small style="font-size: 15px" class="team-designation">
+                Diploma otorgado por completar el curso de Power BI
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752968781/1752968448815-3ea11900-fc30-4e8c-8fbc-fc23ee0b6eb2_1_s3oa6i.jpg" alt="Desarrollo Web" />
+            <h3 style="font-size: 20px">
+               Power Apps
+              <small style="font-size: 15px" class="team-designation">
+                Diploma otorgado por completar el curso de Power Apps, desarrollando competencias en creación de aplicaciones empresariales sin código
+              </small>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-arrow team-left-arrow" id="prev-arrow">&#8249;</div>
+      <div class="team-arrow team-right-arrow" id="next-arrow">&#8250;</div>
+    </div>
+  </div>
+</section>
+
+
+
+<br>
+
+
+
+
+
+<section id="pricing">
+  <div class="team-container">
+    <div class="team-center">
+      <h2>Mis logros académicos</h2>
+      <p class="team-lead">
+        Estos son algunos de mis logros académicos obtenidos con esfuerzo, dedicación y muchas ganas de seguir aprendiendo
+      </p>
+    </div>
+
+    <div class="team-carousel" id="team-carousel">
+      <div class="team-carousel-inner" id="carousel-inner">
+
+        <!-- Grupo 1 -->
+        <div class="team-item">
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752978591/WhatsApp_Image_2025-07-19_at_7.48.25_PM_ny19to.jpg" alt="GeoEspaciales" />
+            <h3 style="font-size: 20px">
+              Primer Lugar
+              <small style="font-size: 15px" class="team-designation">
+               Medalla por obtener las mejores calificaciones en Educación Básica
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752978590/WhatsApp_Image_2025-07-19_at_7.53.17_PM_nd5thm.jpg" alt="Certificado Excel" />
+            <h3 style="font-size: 20px">
+              Desarrollo de pagina web
+              <small style="font-size: 15px" class="team-designation">
+                Medalla por desarrollar una página web funcional
+              </small>
+            </h3>
+          </div>
+
+          <div class="team-member">
+            <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752978580/WhatsApp_Image_2025-07-19_at_8.11.32_PM_rlwg86.jpg" alt="Certificado JS" />
+            <h3 style="font-size: 20px">
+              Medallas de perseverancia
+              <small style="font-size: 15px" class="team-designation">
+                Medalla por perseverancia y nunca rendirse
+              </small>
+            </h3>
+          </div>
+        </div>
+
+       
+
+      <div class="team-arrow team-left-arrow" id="prev-arrow">&#8249;</div>
+      <div class="team-arrow team-right-arrow" id="next-arrow">&#8250;</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <section id="about-us">
+        <div class="service-container">
+  <div class="service-header">
+    <h2>Voluntariados</h2>
+    <div class="service-dot"></div>
+    <p>experiencias que me han permitido contribuir, aprender y crecer junto a mi comunidad.</p>
+  </div>
+
+  <div class="service-grid">
+    <div class="service-box">
+      <div class="service-icon"><img src="https://res.cloudinary.com/dgd2991om/image/upload/v1751755242/WhatsApp_Image_2025-07-05_at_4.40.01_PM_inn8vk.jpg" alt="Servicio 1"></div>
+      <h4>Contribuir activamente en la limpieza de las calles cercanas a la escuela</h4>
+      <p></p>
+    </div>
+
+    <div class="service-box">
+      <div class="service-icon"><img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752979235/WhatsApp_Image_2025-07-17_at_9.31.14_PM_do9epz.jpg" alt="Servicio 2"></div>
+      <h4>Brindar apoyo académico en matemáticas a otros estudiantes</h4>
+      <p></p>
+    </div>
+
+    <div class="service-box">
+      <div class="service-icon"><img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752979820/WhatsApp_Image_2025-07-19_at_8.49.19_PM_fz056s.jpg" alt="Servicio 3"></div>
+      <h4>Colaborar en las labores de limpieza dentro de la institución</h4>
+      <p></p>
+    </div>
+
+    </section><!--/#about-us-->
+
+
+
+
+
+<header>
+    <h1>Kevin Morales - Portafolio</h1>
+  </header>
+
+  <div class="contenedor">
+    <h2>Mis Proyectos</h2>
+    <div class="proyectos">
+      <a href="https://apps.powerapps.com/play/e/default-d8e3bd44-0bba-426b-952d-ada7bb17393c/a/b11bbcc4-d0a1-4567-a165-6639659fe0de?tenantId=d8e3bd44-0bba-426b-952d-ada7bb17393c&hint=d81fbcce-c4c9-4fc2-aae7-f9eb1270d3f9&sourcetime=1752981007861" class="proyecto">
+        <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752981781/WhatsApp_Image_2025-07-19_at_9.20.14_PM_ow9s3n.jpg" alt="Proyecto 1">
+        <h3>¡Help Me!</h3>
+        <p>App para resolver todo tipo de problemas a lo largo de nuestras vidas</p>
+      </a>
+      <a href="proyecto2.html" class="proyecto">
+        <img src="https://res.cloudinary.com/dgd2991om/image/upload/v1752981781/WhatsApp_Image_2025-07-19_at_9.20.10_PM_ozwggh.jpg" alt="Proyecto 2">
+        <h3>Agro Market</h3>
+        <p>Plataforma para conectar productores con compradores.</p>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="box last">
+                <div class="row">
+                    <div class="col-sm-6">
+                       <!-- CONTACT SECTION -->
+<section id="contact" style="padding: 60px 0; background: #f9f9f9; font-family: Arial, sans-serif;">
+  <div style="max-width: 700px; margin: auto; background: white; padding: 40px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-radius: 10px;">
+    
+    <h2 style="text-align: center; margin-bottom: 30px; color: #333;">¡Escribeme!</h2>
+
+    <form action="https://formspree.io/f/mqaledoy" method="POST">
+      <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+        <input type="text" name="name" placeholder="Your Name" required style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="email" name="email" placeholder="Your Email" required style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <textarea name="message" rows="6" placeholder="Your Message" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+      </div>
+
+      <button type="submit" style="width: 100%; background: #e74c3c; color: white; border: none; padding: 15px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: background 0.3s;">
+        Send Message
+      </button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;"></p>
+  </div>
+</section>
+
+
+                    </div><!--/.col-sm-6-->
+                    <div class="col-sm-6">
+                        <h1>Datos</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <address>
+                                    <br>
+                                    <b>Correo electronico Gmail:</b> castrokevin1407@gmail.com<br>
+                                    <b>Correo electronico Outlook:</b> kevin.morales2025@grupoq.superate.org.sv<br>
+                                    <abbr title="Phone"><b>teléfono:</b></abbr> (503) 7541-2837
+                                </address>
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                        <h1>Redes Sociales</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/kevin.morales.castro.2025?rdid=MrKhFHGiuAtHUI1y&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F1AycHSY4rw%252F"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                    <li><a href=" https://www.instagram.com/kevwin_castro?igsh=MW52cGF0dmk3cXpqcg==&utm_source=ig_contact_invite"><i class="icon-instagram icon-social"></i> Instagram</a></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="https://www.linkedin.com/in/kevin-osmel-morales-castro-85aa27346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                  
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--/.col-sm-6-->
+                </div><!--/.row-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#contact-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <img class="pull-right" src="images/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+<script>
+  let kpCurrentIndex = 0;
+  const kpTestimonials = document.querySelectorAll('.kp-testimonial');
+
+  function kpShowSlide(index) {
+    kpTestimonials.forEach((testimonial, i) => {
+      testimonial.classList.toggle('active', i === index);
+    });
+  }
+
+  function kpNextSlide() {
+    kpCurrentIndex = (kpCurrentIndex + 1) % kpTestimonials.length;
+    kpShowSlide(kpCurrentIndex);
+  }
+
+  function kpPrevSlide() {
+    kpCurrentIndex = (kpCurrentIndex - 1 + kpTestimonials.length) % kpTestimonials.length;
+    kpShowSlide(kpCurrentIndex);
+  }
+</script>
+
+
+<script>
+  const carouselInner = document.getElementById('carousel-inner');
+  const totalItems = carouselInner.children.length;
+  let currentIndex = 0;
+
+  document.getElementById('prev-arrow').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+  });
+
+  document.getElementById('next-arrow').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    carouselInner.style.transform = `translateX(-${currentIndex * 50}%)`;
+  }
+
+  const members = document.querySelectorAll('.team-member');
+  members.forEach(member => {
+    member.addEventListener('click', () => {
+      if (member.classList.contains('expanded')) {
+        member.classList.remove('expanded');
+      } else {
+        members.forEach(m => m.classList.remove('expanded'));
+        member.classList.add('expanded');
+      }
+    });
+  });
+</script>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
